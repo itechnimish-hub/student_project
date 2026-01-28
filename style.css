@@ -1,0 +1,100 @@
+/* Layout ko align karne ke liye basic settings */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+/* Header Grid (col-lg-3 col-md-3) */
+.main {
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Top Header Section Responsive Grid */
+.size1 .row .col-lg-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+/* Service Cards Section Grid */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Desktop: 4 Columns */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Loan Calculator Section Grid */
+#container5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 Columns: Calculator and Image */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Blog Section Grid */
+.container7 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Columns for Blogs */
+  gap: 20px;
+}
+
+/* Testimonials Section Grid */
+.container8 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Columns for Testimonials */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* --- Responsive Breakpoints (Media Queries) --- */
+
+/* Tablets (iPad/Tablets) */
+@media (max-width: 992px) {
+  .container,
+  .container7,
+  .container8 {
+    grid-template-columns: repeat(2, 1fr); /* Tablet: 2 Columns */
+  }
+
+  .size1 .row .col-md-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 576px) {
+  .container,
+  .container7,
+  .container8,
+  #container5 {
+    grid-template-columns: 1fr; /* Mobile: 1 Column (Pura width) */
+  }
+
+  .size1 .row .col-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  #m3,
+  #m4,
+  #m21 {
+    width: 100%; /* Images mobile par full width ho jayengi */
+    height: auto;
+  }
+}
+
+/* Images aur basic styling */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+}
